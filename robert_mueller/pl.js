@@ -1,7 +1,7 @@
 function isVowel(s)
 {
     const regex = /^[aeiouAEIOU]$/;
-    return regex.test(s);
+    return regex.test(s); // a bit overkill
 }
 
 function convertWord(w) {
