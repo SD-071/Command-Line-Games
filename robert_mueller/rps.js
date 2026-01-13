@@ -67,7 +67,7 @@ if (users_choice==0 && computers_choice==1 ||
     users_choice==2 && computers_choice==0) {
         msg="You win!"
 } else {
-    msg="Computer wins";
+    msg="Computer wins!";
 }
 
 console.log(`You chose ${num2name(users_choice)}. Computer chose ${num2name(computers_choice)}. ${msg}`)

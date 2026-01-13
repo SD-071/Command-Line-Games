@@ -6,18 +6,21 @@ function isVowel(s)
 
 function convertWord(w) {
     w=w.trim(); // remove white space at both ends
+
     if (w.length>=2) {
+
+        const isCap= (w[0] === w[0].toUpperCase() && w[0] !== w[0].toLowerCase());
+
         if (!isVowel(w[0]) && isVowel(w[1])) {
-            return  w.slice(1) + w[0].toLowerCase() + "ay";
+            w =  w.slice(1) + w[0].toLowerCase() + "ay";
         } else
         if (!isVowel(w[0]) && !isVowel(w[1])) {
-             return w.slice(2) + w.slice(0,2).toLowerCase() + "ay";
+             w = w.slice(2) + w.slice(0,2).toLowerCase() + "ay";
         }
         else if (isVowel(w[0])){
-            return w + "way";
-        } else {
-            return w;
+            w = w + "way";
         }
+        if (isCap) { w=w[0].toUpperCase() + w.slice(1);}
     }
     return w;
 }
