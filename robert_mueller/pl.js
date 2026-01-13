@@ -1,8 +1,4 @@
-function isVowel(s)
-{
-    const regex = /^[aeiouAEIOU]$/;
-    return regex.test(s); // a bit overkill
-}
+const isVowel= s => 'aeiouAEIOU'.includes(s);
 
 function convertWord(w) {
     w=w.trim(); // remove white space at both ends
@@ -20,7 +16,7 @@ function convertWord(w) {
         else if (isVowel(w[0])){
             w = w + "way";
         }
-        if (isCap) { w=w[0].toUpperCase() + w.slice(1);}
+        if (isCap) {w=w[0].toUpperCase() + w.slice(1);}
     }
     return w;
 }
