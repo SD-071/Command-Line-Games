@@ -38,6 +38,5 @@ if (randomMove == playersMove) {
     gameResult += 'You lose.'
 }
 
-
 console.log(gameResult);
 return;
