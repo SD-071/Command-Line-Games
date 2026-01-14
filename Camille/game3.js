@@ -9,6 +9,11 @@ if (!playerMove) {
     process.exit();
 }
 
+if (playerMove !== 'rock' && playerMove !== 'paper' && playerMove !== 'scissors') {
+    console.log("Invalid choice. Please choose rock, paper, or scissors.");
+    process.exit();
+}
+
 const computerMove = getComputerChoice();
 
 
